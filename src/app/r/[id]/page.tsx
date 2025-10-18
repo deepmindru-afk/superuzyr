@@ -2,6 +2,7 @@
 
 import { useState, useEffect, use } from 'react';
 import { Task, RunTaskResponse } from '@/lib/types';
+import { ThemeToggle } from '@/lib/theme-context';
 
 interface RunnerPageProps {
   params: Promise<{ id: string }>;
@@ -200,10 +201,10 @@ export default function RunnerPage({ params }: RunnerPageProps) {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 dark:bg-slate-900 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
-          <p className="mt-2 text-gray-600">Loading task...</p>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mx-auto"></div>
+          <p className="mt-4 text-gray-600 dark:text-gray-300 text-lg">Loading automation task...</p>
         </div>
       </div>
     );
@@ -211,11 +212,16 @@ export default function RunnerPage({ params }: RunnerPageProps) {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="text-red-600 text-xl mb-2">⚠️</div>
-          <h1 className="text-xl font-semibold text-gray-900 mb-2">Error</h1>
-          <p className="text-gray-600">{error}</p>
+      <div className="min-h-screen bg-gray-50 dark:bg-slate-900 flex items-center justify-center">
+        <div className="glass-card p-8 text-center max-w-md mx-4">
+          <div className="w-16 h-16 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span className="text-red-600 dark:text-red-400 text-2xl">❌</span>
+          </div>
+          <h1 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Error</h1>
+          <p className="text-gray-600 dark:text-gray-300 mb-6">{error}</p>
+          <a href="/" className="btn-primary">
+            ← Back to Applets
+          </a>
         </div>
       </div>
     );
@@ -223,10 +229,16 @@ export default function RunnerPage({ params }: RunnerPageProps) {
 
   if (!task) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-xl font-semibold text-gray-900 mb-2">Task Not Found</h1>
-          <p className="text-gray-600">The requested task could not be found.</p>
+      <div className="min-h-screen bg-gray-50 dark:bg-slate-900 flex items-center justify-center">
+        <div className="glass-card p-8 text-center max-w-md mx-4">
+          <div className="w-16 h-16 bg-yellow-100 dark:bg-yellow-900 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span className="text-yellow-600 dark:text-yellow-400 text-2xl">⚠️</span>
+          </div>
+          <h1 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Task Not Found</h1>
+          <p className="text-gray-600 dark:text-gray-300 mb-6">The requested automation task could not be found.</p>
+          <a href="/" className="btn-primary">
+            ← Back to Applets
+          </a>
         </div>
       </div>
     );
