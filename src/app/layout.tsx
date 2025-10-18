@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SuperUser - Browser Automation Applets",
-  description: "Pre-configured browser automation applets ready to use. Just run or embed in your website.",
+  title: "SuperUser - Get things done by AI, not just ask",
+  description: "The intelligent browser automation platform that actually executes tasks. Pre-configured applets ready to use or embed in your website.",
 };
 
 export default function RootLayout({

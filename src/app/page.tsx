@@ -90,7 +90,7 @@ export default function HomePage() {
                   <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                     SuperUser
                   </h1>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Browser Automation Platform</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">Get things done by AI, not just ask</p>
                 </div>
               </div>
             </div>
@@ -113,12 +113,12 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Build apps that can
+              It's time to
               <br />
-              <span className="hero-text">see, hear, and speak</span>
+              <span className="hero-text">Get things done by AI, not just ask</span>
             </h2>
             <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
-              The open source framework for intelligent browser automation agents.
+              The intelligent browser automation platform that actually executes tasks.
               <br />
               Pre-configured applets ready to use or embed in your website.
             </p>
@@ -359,7 +359,7 @@ export default function HomePage() {
                 <span className="text-xl font-bold">SuperUser</span>
               </div>
               <p className="text-gray-400 leading-relaxed">
-                The open source framework for intelligent browser automation agents.
+                Get things done by AI, not just ask. The intelligent browser automation platform that actually executes tasks.
               </p>
             </div>
             
